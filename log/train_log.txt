@@ -1,0 +1,6 @@
+02-01-2021 13:16:46 Test loss: 0.4007887805543899 Test accuracy: 91.43 Model Name: transfer_lrn_model_02012021_131644
+03-01-2021 09:49:51 Test loss: 0.4561 Test accuracy: 90.75% Model Name: transfer_lrn_model_03012021_094948
+03-01-2021 09:56:40 Test loss: 0.4308 Test accuracy: 90.23% Model Name: transfer_lrn_model_03012021_095638
+03-01-2021 10:07:41 Test loss: 0.4283 Test accuracy: 89.52% Model Name: transfer_lrn_model_03012021_100739
+03-01-2021 10:21:06 Test loss: 0.3575 Test accuracy: 91.05% Model Name: transfer_lrn_model_03012021_102104
+03-01-2021 10:28:05 Test loss: 0.416 Test accuracy: 90.23% Model Name: transfer_lrn_model_03012021_102803

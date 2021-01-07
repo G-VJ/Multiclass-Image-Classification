@@ -1,0 +1,6 @@
+./storage/dataset/seg_test/buildings
+./storage/dataset/seg_test/sea
+./storage/dataset/seg_test/glacier
+./storage/dataset/seg_test/mountain
+./storage/dataset/seg_test/forest
+./storage/dataset/seg_test/street
