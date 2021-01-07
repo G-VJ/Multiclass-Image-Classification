@@ -28,5 +28,7 @@ async def predict_image(file: UploadFile = File(...)):
     print(response)
     return response
     
-#if __name__ == "__main__":
-#    uvicorn.run("main:app", reload=True)
+if __name__ == "__main__":
+    # Bind to PORT if defined, otherwise default to 5000.
+    port = int(os.environ.get('PORT', 5000))
+    uvicorn.run("main:app", reload=True, host="0.0.0.0", port=port)
