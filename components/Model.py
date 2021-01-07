@@ -1,12 +1,12 @@
 import os
-import cv2
+#import cv2
 import datetime
-import pandas as pd
+#import pandas as pd
 import numpy as np
 import tensorflow as tf
-from sklearn.utils import shuffle
-from sklearn.model_selection import GridSearchCV
-from sklearn.model_selection import train_test_split
+#from sklearn.utils import shuffle
+#from sklearn.model_selection import GridSearchCV
+#from sklearn.model_selection import train_test_split
 from tensorflow.keras.layers import Flatten
 from tensorflow.keras.applications import vgg16
 from tensorflow.keras.utils import to_categorical
