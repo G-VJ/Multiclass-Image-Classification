@@ -14,23 +14,23 @@ lables = ['Buildings', 'Sea', 'Glacier', 'Mountain', 'Forest', 'Street']
 def hello():
     return {"message":"Hello World"}
 
-@app.post("/predict/image") 
-async def predict_image(file: UploadFile = File(...)):
-    extension = file.filename.split(".")[-1] in ("jpg", "jpeg", "png")
-    if not extension:
-        return "Image must be jpg or png format!"
-    image = Image.open(BytesIO(await file.read()))
-    model = Model()
-    model.load_model()
-    pred_result = model.predict_img(image)
-    response = []
-    for i in range(0,len(pred_result[0])):
-        resp = {}
-        resp["class"] = lables[i]
-        resp["confidence"] = f"{pred_result[0][i]*100:0.2f} %"
-        response.append(resp)
-    print(response)
-    return response
+# @app.post("/predict/image") 
+# async def predict_image(file: UploadFile = File(...)):
+    # extension = file.filename.split(".")[-1] in ("jpg", "jpeg", "png")
+    # if not extension:
+        # return "Image must be jpg or png format!"
+    # image = Image.open(BytesIO(await file.read()))
+    # model = Model()
+    # model.load_model()
+    # pred_result = model.predict_img(image)
+    # response = []
+    # for i in range(0,len(pred_result[0])):
+        # resp = {}
+        # resp["class"] = lables[i]
+        # resp["confidence"] = f"{pred_result[0][i]*100:0.2f} %"
+        # response.append(resp)
+    # print(response)
+    # return response
     
 if __name__ == "__main__":
     # Bind to PORT if defined, otherwise default to 5000.
