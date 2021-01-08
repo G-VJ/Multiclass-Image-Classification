@@ -10,6 +10,10 @@ app = FastAPI()
 
 lables = ['Buildings', 'Sea', 'Glacier', 'Mountain', 'Forest', 'Street']
 
+@app.get("/")
+def hello():
+    return {"message":"Hello World"}
+
 @app.post("/predict/image") 
 async def predict_image(file: UploadFile = File(...)):
     extension = file.filename.split(".")[-1] in ("jpg", "jpeg", "png")
@@ -28,8 +32,8 @@ async def predict_image(file: UploadFile = File(...)):
     print(response)
     return response
     
-if __name__ == "__main__":
+#if __name__ == "__main__":
     # Bind to PORT if defined, otherwise default to 5000.
     #port = int(process.env.PORT)
-    uvicorn.run("main:app", reload=True)
+#    uvicorn.run("main:app", reload=True)
     #uvicorn.run("main:app", host="0.0.0.0")
