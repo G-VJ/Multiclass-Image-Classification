@@ -15,7 +15,7 @@ def hello():
     return {"message":"Hello World"}
 
 @app.post("/predict/image") 
-async def predict_image(file: UploadFile = File(...)):
+def predict_image(file: UploadFile = File(...)):
     extension = file.filename.split(".")[-1] in ("jpg", "jpeg", "png")
     if not extension:
         return "Image must be jpg or png format!"
